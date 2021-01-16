@@ -10,10 +10,10 @@ picom &
 xsetroot -cursor_name left_ptr &
 nm-applet &
 flameshot &
-corectrl &
+pgrep -x corectrl > /dev/null || corectrl &
 blueman-applet &
-pasystray &
-echo hook:module/ipc1 >>/tmp/polybar_mqueue.* &
+pgrep -x pasystray > /dev/null || pasystray &
+echo hook:module/ipc1 >> /tmp/polybar_mqueue.* &
 polybar-spotify-listener.py &
 
 
