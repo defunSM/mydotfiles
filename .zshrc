@@ -25,11 +25,10 @@ alias wget='wget -c '
 alias untar='tar -zxvf '
 alias ping='ping -c 5'
 alias speed='speedtest-cli --server 35020 --simple'
+alias gconfig='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 #alias ls='exa --header --long --group'
 # bindings
 
-alias gconfig='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-complete -F _complete_alias gconfig
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
