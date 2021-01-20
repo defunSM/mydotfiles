@@ -8,6 +8,7 @@ redshift -P -O 4000 &
 nitrogen --restore &
 picom &
 xsetroot -cursor_name left_ptr &
+git config --global credential.helper "cache --timeout=3600" &
 nm-applet &
 flameshot &
 pgrep -x corectrl > /dev/null || corectrl &
@@ -45,7 +46,9 @@ bspc rule -a nautilus state=floating follow=on
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey mange=off
 bspc rule -a Emacs state=tiled
+bspc rule -a Virt-manager desktop='^2' state=floating follow=on
 bspc rule -a looking-glass-client state=fullscreen
+
 
 bspc rule -a scratchpad sticky=on state=floating hidden=on
 # check scratchpad already running
